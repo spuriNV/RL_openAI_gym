@@ -2,7 +2,7 @@
 
 A complete implementation of Deep Q-Network (DQN) reinforcement learning agent to solve the OpenAI Gym CartPole environment.
 
-## 🎯 What This Project Does
+## What This Project Does
 
 This project demonstrates how to train a neural network agent using Deep Q-Learning to balance a pole on a moving cart. The agent learns to take optimal actions (move left or right) to keep the pole upright for as long as possible.
 
@@ -13,7 +13,7 @@ This project demonstrates how to train a neural network agent using Deep Q-Learn
 - **Model Persistence** - save and reload trained agents
 - **Performance Visualization** - watch the trained agent in action
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - Python 3.7+
@@ -39,7 +39,7 @@ Simply execute the Python script:
 python deep_reinforcement_learning.py
 ```
 
-## 📊 Expected Results
+## Expected Results
 
 ### Training Process:
 - **Random Performance**: ~10-30 points per episode (baseline)
@@ -54,7 +54,7 @@ python deep_reinforcement_learning.py
 5. **Visualization** - Watch the trained agent balance the pole
 6. **Model Persistence** - Save/load demonstration
 
-## 🧠 How It Works
+## How It Works
 
 ### Deep Q-Network (DQN) Algorithm:
 1. **Experience Collection**: Agent interacts with environment, storing (state, action, reward, next_state) tuples
@@ -73,7 +73,7 @@ Input (4) → Flatten → Dense(24, ReLU) → Dense(24, ReLU) → Output(2, Line
 - **Action Space**: 2 actions (move left: 0, move right: 1)
 - **Goal**: Keep pole upright for maximum time (200 steps = perfect score)
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 RL-GYM/
@@ -82,7 +82,7 @@ RL-GYM/
 └── README.md                         # This file
 ```
 
-## 🔧 Customization
+## Customization
 
 ### Hyperparameters You Can Modify:
 - **Training Steps**: Change `nb_steps=50000` for longer/shorter training
@@ -103,7 +103,7 @@ model.add(Dense(64, activation='relu'))  # Instead of 24
 dqn.compile(Adam(lr=1e-4), metrics=['mae'])  # Slower learning
 ```
 
-## 🎓 Learning Resources
+## Learning Resources
 
 ### Reinforcement Learning Concepts:
 - [Deep Q-Learning](https://en.wikipedia.org/wiki/Q-learning)
@@ -116,7 +116,7 @@ dqn.compile(Adam(lr=1e-4), metrics=['mae'])  # Slower learning
 - **Acrobot-v1**: Swinging up a double pendulum
 - **MountainCar-v0**: Climbing a hill with limited power
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Common Issues:
 
@@ -136,27 +136,10 @@ pip install keras-rl2
 - Reduce memory size: `limit=25000`
 - Use smaller network: Dense(16) instead of Dense(24)
 
-## 📈 Performance Tips
+## Performance Tips
 
 1. **GPU Acceleration**: Install TensorFlow-GPU for faster training
 2. **Hyperparameter Tuning**: Experiment with learning rates and network sizes
 3. **Environment Variations**: Try different Gym environments
 4. **Advanced Algorithms**: Implement Dueling DQN, Double DQN, or A3C
 
-## 🤝 Contributing
-
-Feel free to:
-- Report bugs or issues
-- Suggest improvements
-- Add new environments
-- Implement advanced RL algorithms
-
-## 📄 License
-
-This project is open source and available under the MIT License.
-
----
-
-**Happy Learning! 🎉**
-
-*This project demonstrates the power of deep reinforcement learning in solving classic control problems.* 
